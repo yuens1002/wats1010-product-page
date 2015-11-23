@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- TODO: Add proper head tag to provide a page description for search
              engines. -->
-        <title>API Superstore</title>
+        <title>API Superstore - App Store API Catalog</title>
         <!-- Bootstrap CSS Framework -->
         <!-- You can remove the ``link`` tags below if you don't want to use
              Bootstrap with your site. If you choose to use Bootstrap, be sure
@@ -16,21 +16,118 @@
              Please Note: This repo does not include the Bootstrap Javascript
              plugins, so you cannot use the features documented under
              "Javascript" on the Bootstrap documentation site. -->
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+        <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.css">
-        <!-- End Bootstrap CSS Framework -->
+        End Bootstrap CSS Framework -->
 
         <!-- TODO: replace favicon, apple-touch-icon, and tile images to best
              support bookmarking. -->
+        <link rel="stylesheet" href="main.css">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="favicon" href="favicon.ico">
 
     </head>
     <body>
-        <!-- Note: If you do not see a lamp icon in the heading below
-             when you view this file in a web browser, then there is an issue
-             with how Bootstrap is linked to this page. -->
-        <h1><span class="glyphicon glyphicon-lamp"></span> Hello World!</h1>
+        <header><h4>Click, Click, Code</h4><h1>APISuperStore</h1></header>
+        <!-- TODO: inline ul in nav to create the 2 lists -->
+        <nav>
+            <ul class="page-anachors">
+                <li>Overview</li>
+                <li>Features</li>
+                <li>Testimonials</li>
+                <li>Contact</li>
+            </ul>
+            <ul class="site-functions">
+                <li>Login</li>
+                <li>Sign Up</li>
+            </ul>
+        </nav>
+        <section id="overview">
+            <header>
+                <h1>One Stop Shop For All Your Apps</h1>
+            </header>
+            <article>
+                <div>
+                    <h2>Click, Click, Code!</h2>
+                    <p>The API Superstore has partnered with API providers 
+                        across the Web to bring you easy access to the hottest 
+                        3rd-party services and features.</p>
+                    <button>Sign Up</button>
+                </div>
+                <div>
+                    <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/L48g1ZWLMdo" 
+                    frameborder="0" allowfullscreen></iframe>
+                </div>    
+            </article>
+        </section>
+        <section id="features">
+            <article class="feature-1"><img 
+                src="http://placehold.it/250?text=Best+API"><p>Best 
+                APIs from all over the web</p>
+            </article>
+            <article class="feature-2"><img 
+                src="http://placehold.it/250?text=Easy+Payment"><p>All major credit 
+                cards, check, wire transfer, or Paypal, Western Union</p>
+            </article>
+            <article class="feature-3"><img 
+                src="http://placehold.it/250?text=Catalog"><p>All your apps in 
+                one spot</p>
+            </article>
+            <article class="feature-4"><img 
+                src="http://placehold.it/250?text=One+Stop+Shop"><p>One-Stop-Shop all 
+                the apps you need</p>
+            </article>
+        </section>
+        <section id="testimonials">
+            <!-- style text in css accordingly -->
+            <header>What People Are Saying</header>
+            <article class="testimonials-short"><p>"This is the best 
+                website ever!"<span class="testimonials-name">- C.P. Yu, <span 
+                class="testimonials-title">AmazingSite.com</span></span></p>
+            </article>
+            <article class="testimonials-long"><p>"I really admire the way the API Superstore team has 
+                created an easy to use interface for browsing the abundance of available apps out there 
+                online for free. For a low monthly fee, I'm able to easily keep up with the churn of new 
+                and upcoming apps that make application development for a small start like myself possible.  
+                Thanks, API Superstore team, you ROCK!<span class="testimonials-name">- Amy Zon, <span 
+                class="testimonials-title">IT Consultant</span></span></p>
+            </article>
+            <artcile class="testimonials-medium"><p>"Once again, I'm blown away by the amazing offerings 
+                of the API Superstore.  YOu really are Super!"<span class="testimonials-name">- 
+                Clara Cache, <span class="testimonials-title">Product Manager</span></span></p>
+            </artcile>
+        </section>
+        <section id="contact">
+            <header>Get in Touch</header>
+            <form>
+                <input type="text" name="name" value="Your Name">
+                <input type="text" name="email" value="Email">
+                <textarea placeholder="Leave Us a Message"></textarea>
+                <button>Send</button>
+            </form>
+        </section>
+        <footer>
+            <ul class="footer-links">
+                <li>Overview</li>
+                <li>Features</li>
+                <li>Testimonials</li>
+                <li>Contacts</li>
+            </ul>
+            <ul class="footer-social">
+                <li>facebook</li>
+                <li>twitter</li>
+                <li>goolge+</li>
+                <li>youtube</li>
+            </ul>
+            <ul class="footer-contact-info">
+                <li>2015. All rights Reserved.</li>
+                <li>API SuperStore</li>
+                <li>(206) 555-1234</li>
+                <li>info@apisuperstore.com</li>
+                <li>Seattle, WA</li>
+            </ul>
+        </footer>
         <!-- TODO: Populate this page with all the content you deem
              necessary to create a compelling product page! -->
 
