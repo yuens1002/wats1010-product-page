@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- TODO: Add proper head tag to provide a page description for search
              engines. -->
-        <title>API Superstore - App Store API Catalog</title>
+        <title>API Superstore - Certified API, Andriod iOS Development</title>
         <!-- Bootstrap CSS Framework -->
         <!-- You can remove the ``link`` tags below if you don't want to use
              Bootstrap with your site. If you choose to use Bootstrap, be sure
@@ -28,56 +28,60 @@
 
     </head>
     <body>
-        <header><h4>Click, Click, Code</h4><h1>APISuperStore</h1></header>
+        <section id="page-header">
+        <header>Click, Click, Code!<br>APISuperStore</header>
         <!-- TODO: inline ul in nav to create the 2 lists -->
         <nav>
-            <ul class="page-anachors">
+            <ul class="nav-anachors">
                 <li>Overview</li>
                 <li>Features</li>
                 <li>Testimonials</li>
                 <li>Contact</li>
             </ul>
-            <ul class="site-functions">
+            <ul class="nav-functions">
                 <li>Login</li>
                 <li>Sign Up</li>
             </ul>
         </nav>
+        </section>    
         <section id="overview">
-            <header>
-                <h1>One Stop Shop For All Your Apps</h1>
-            </header>
-            <article>
-                <div>
-                    <h2>Click, Click, Code!</h2>
-                    <p>The API Superstore has partnered with API providers 
-                        across the Web to bring you easy access to the hottest 
-                        3rd-party services and features.</p>
+            <ul class="overview-container">
+                <li class="overview-text">
+                    <p><span class="">Amazing Selection and One-Stop-Shop</span><br>We have partnered with API 
+                        providers across the Web to bring you easy access to the hottest  3rd-party 
+                        services and features. Sign up now for a free 30-day trial.<br>
+                        </p>
                     <button>Sign Up</button>
-                </div>
-                <div>
-                    <iframe width="560" height="315" 
-                    src="https://www.youtube.com/embed/L48g1ZWLMdo" 
-                    frameborder="0" allowfullscreen></iframe>
-                </div>    
-            </article>
+                </li>
+                <li class="overview-video">
+                    <iframe src="https://www.youtube.com/embed/L48g1ZWLMdo" 
+                    height="280px" frameborder="0" allowfullscreen></iframe>
+                </li>
+            </ul>    
         </section>
         <section id="features">
-            <article class="feature-1"><img 
-                src="http://placehold.it/250?text=Best+API"><p>Best 
-                APIs from all over the web</p>
-            </article>
-            <article class="feature-2"><img 
-                src="http://placehold.it/250?text=Easy+Payment"><p>All major credit 
-                cards, check, wire transfer, or Paypal, Western Union</p>
-            </article>
-            <article class="feature-3"><img 
-                src="http://placehold.it/250?text=Catalog"><p>All your apps in 
-                one spot</p>
-            </article>
-            <article class="feature-4"><img 
-                src="http://placehold.it/250?text=One+Stop+Shop"><p>One-Stop-Shop all 
-                the apps you need</p>
-            </article>
+            <article class="container">
+                <header>Features at a Glance</header>
+                <ul class="container-features">
+                    <li class="feature">
+                        <img src="http://placehold.it/150?text=1">
+                        <p>100% Certified APIs</p>
+                    </li>
+                    <li class="feature">
+                        <img src="http://placehold.it/150?text=2">
+                        <p>1-Click Install</p>
+                    </li>
+                    <li class="feature">
+                        <img src="http://placehold.it/150?text=3">
+                        <p>Unlimited Download</p>
+                    </li>
+                    <li class="feature">
+                        <img src="http://placehold.it/150?text=4">
+                        <p>One-Stop-Shop</p>
+                    </li>
+                </ul>
+            <p>All APIs are 100% certified for Windows, Mac, Andriod 4.0+, and Apple iOS 6.0+ development platforms.  Unlimited download from over 50,000 APIs with 1-click installation.  Sign up now for a free 30-day trial.</p>                                       
+            </article>                                            
         </section>
         <section id="testimonials">
             <!-- style text in css accordingly -->
@@ -99,35 +103,47 @@
             </artcile>
         </section>
         <section id="contact">
-            <header>Get in Touch</header>
-            <form>
-                <input type="text" name="name" value="Your Name">
-                <input type="text" name="email" value="Email">
-                <textarea placeholder="Leave Us a Message"></textarea>
-                <button>Send</button>
-            </form>
+            <section class="container">
+                    <header>Get in Touch</header>
+                    <form>
+                        <div class="container-form">
+                            <div><input type="text" name="name" placeholder="Name"></div>
+                            <div><input type="text" name="email" placeholder="Email"></div>
+                        </div>    
+                        <textarea placeholder="Leave Us a Message" rows="8"></textarea>
+                        <button>Send</button>
+                    </form>
+            </section>    
         </section>
         <footer>
-            <ul class="footer-links">
-                <li>Overview</li>
-                <li>Features</li>
-                <li>Testimonials</li>
-                <li>Contacts</li>
-            </ul>
-            <ul class="footer-social">
-                <li>facebook</li>
-                <li>twitter</li>
-                <li>goolge+</li>
-                <li>youtube</li>
-            </ul>
-            <ul class="footer-contact-info">
-                <li>2015. All rights Reserved.</li>
-                <li>API SuperStore</li>
-                <li>(206) 555-1234</li>
-                <li>info@apisuperstore.com</li>
-                <li>Seattle, WA</li>
-            </ul>
+            <article class="footer-links">
+                <ul>
+                    <li>Overview</li>
+                    <li>Features</li>
+                    <li>Testimonials</li>
+                    <li>Contact</li>
+                    <ul class="footer-social">
+                        <li>facebook</li>
+                        <li>twitter</li>
+                        <li>goolge+</li>
+                        <li>youtube</li>
+                    </ul>
+                    <li><button>Login</button></li>Need an Account?
+                </ul>
+            </article>
+            <article class="footer-info">
+                        API SuperStore<br>
+                        STE 1689<br>
+                        1 Union St<br>
+                        Seattle, WA 98101<p>
+                        Technical Support (9-5 Weekdays)<br>
+                        206-555-1234</p>    
+            </article>
+            <article class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.9891947806977!2d-122.3435231484166!3d47.60689977908261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab20ad0c041%3A0xbffbaa1fb91f4635!2s1+Union+St%2C+Seattle%2C+WA+98101!5e0!3m2!1sen!2sus!4v1448382912908" frameborder="0" style="border:0"></iframe>
+            </article>        
         </footer>
+        <p class="credits">FALL 2015, SU WATS1010.  Ficticious Product Page Assignment by Sunny Yuen</p>
         <!-- TODO: Populate this page with all the content you deem
              necessary to create a compelling product page! -->
 

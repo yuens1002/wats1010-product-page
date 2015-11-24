@@ -1,11 +1,24 @@
-/* Product Page Assignment for SU WATS1010 2015 
+/********************************************************************* 
+
+Ficticious Product Page Assignment 
+SU WATS1010, Fall 2015 - Sunny Yuen
+
+**********************************************************************
+
+
 
 01 defaults
 02 typography
-03 media queries
+03 layout / modules
+04 media queries
 
 
-************************************************/
+
+/********************************************************************* 
+01 deaults
+*********************************************************************/
+
+
 
 html,
 body,
@@ -19,6 +32,8 @@ li,
 pre,
 form,
 fieldset,
+article,
+section,
 p,
 blockquote,
 th,
@@ -28,15 +43,222 @@ td {
     list-style-type: none;
 }
 
-
 p,
-ul,
-ol,
 pre,
 table,
-blockquote {
-    margin-top: 1rem;  /**  multiple(s) of line-height  **/  
-    margin-bottom: 1rem;  /**  multiple(s) of line-height  **/
+blockquote, 
+.container-form
+  {
+    margin-top: 1rem;  /**  multiple(s) of line-height **/  
+    /**  omitted margin-bottom to allow margins from modules to dictate **/ 
+}
+
+button {
+    margin-top: 2rem; 
+}
+
+li {
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+}
+
+
+
+/********************************************************************* 
+02 typography
+************************************************/
+
+
+
+/*
+
+a:hover:after  {
+    content: "";
+    border-bottom: 5px solid #ec6713;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+}
+
+*/
+
+
+
+/************************************************ 
+03 layout / modules
+************************************************/
+
+
+
+body {
+    width: 100%;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+
+
+#page-header,
+#overview,
+#testimonials,
+.container,
+footer {
+    max-width: 780px;
+    /* centers content */
+    margin: 0 auto;
+    /* settting padding left/right when viewpoint is narrower than the content */
+    padding: 3rem 2rem;
+}
+
+#features,
+#contact {
+    background-color: #eaeaea;
+}
+
+.container-features {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+}
+
+.feature {
+    margin-bottom: 2rem;
+    flex: 1 auto;
+    background-color: grey;
+    text-align: center;
+    
+}
+
+textarea {
+    display: block;
+    margin-top: 2rem;
+    width: 100%;
+    outline: none;
+    resize: none;
+    overflow: auto;
+}
+
+.container-form {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.container-form > div {
+    /* gives the gap in between the input fields, 
+    would be good to set the gap to 2rem @ all times */  
+    width: 47%;  
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    
+}
+
+footer {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+}
+
+footer article {
+    flex: 1 auto;
+    align-self: flex-end;
+}
+
+.footer-info {
+    margin: 0 2rem 0 3rem;
+    
+}
+
+.footer-links > ul > li {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    border-right: 1px solid #eaeaea;
+    padding-right: 2rem;
+}
+
+.credits {
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: #eaeaea;
+}
+
+p.credits {
+    margin-top: 0;
+}
+
+nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 2rem;
+}
+
+.nav-anachors li {
+    margin-right: 2rem;
+}
+
+.nav-anachors {
+    flex: 3 auto;
+}
+
+.nav-functions li {
+    margin-left: 2rem;
+}
+.nav-functions {
+    flex: 1 auto;
+    text-align: right;
+}
+
+.overview-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 2rem;
+}
+
+.overview-text {
+    flex: 1 40%;
+    align-self: flex-end;
+    margin-right: 2rem;
+}
+
+.overview-video {
+    flex: 1 60%;
+    border: 5px solid #eaeaea;
 }
 
 
