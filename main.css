@@ -18,7 +18,7 @@ SU WATS1010, Fall 2015 - Sunny Yuen
 01 deaults
 *********************************************************************/
 
-@import url(https://fonts.googleapis.com/css?family=Monda|Julius+Sans+One|Quicksand);
+@import url(https://fonts.googleapis.com/css?family=Monda|Titillium+Web:200,600|Quicksand);
 
 html,
 body,
@@ -41,6 +41,11 @@ td {
     margin: 0; 
     padding: 0;
     list-style-type: none;
+}
+
+
+header {
+    margin-bottom: 3rem;
 }
 
 p,
@@ -72,8 +77,17 @@ textarea {
   -moz-border-radius: 5;
   border-radius: 5px;
   border: 1px solid #ccc;
-  padding: 1rem 1.5rem;
+  /* spec for percentage unit to prevent horizontal 
+    scroll bar from showing up when the page is 
+    resized to smaller than max-width*/    
+  padding: 1rem 4%;  /* sets the padding needed for the placeholder text */
+  outline: none;
+  resize: none;
+  width: 100%;
 }
+
+
+
 
 /********************************************************************* 
 02 typography
@@ -81,27 +95,59 @@ textarea {
 
 body, 
 button, 
-input, 
+input,
 textarea {
-    font: 100%/1.5 Quicksand;
+    font: 100%/1.5 Quicksand, sans-serif;
+    color: #555;
+}
+
+nav {
     color: #333;
 }
 
-header {
-    font: 2.369rem/1.2 "Julius Sans One", serif;
-    margin-bottom: 3rem;
+h1,
+h2,
+h3,
+h4,
+.font-alpha,
+.font-beta,
+.font-gamma,
+.font-delta { 
+    line-height: 1.3;
+    display: inline-block;
+    margin: 0;   
 }
 
+.logo-API {
+    font: 5.653rem 'Titillium Web', sans-serif;
+    line-height: .8; 
+    font-weight: 600;
+    text-shadow: 5px 8px #70d0da;
+}
+
+.logo-superstore {
+    font-size: 3.657rem;
+    font-weight: 200;
+    text-shadow: none;
+}
+
+h1, 
+header,
+.font-alpha {
+    font-size: 2.369rem;
+}
+
+h2,
 .font-beta {
     font-size: 1.777rem;
-    line-height: 1.2;
 }
 
+h3,
 .font-gamma {
     font-size: 1.333rem;
-    line-height: 1.2;
 }
 
+h4,
 .font-delta {
     font-size: 1rem;
     line-height: 1.5;
@@ -112,27 +158,64 @@ small {
     font-size: 85%;
 }
 
-svg:hover path {
+footer svg:hover path {
     fill: rgb(4, 196, 214);
 }
 
-svg path {
+footer svg path {
     fill: #999;
     
 }
 
-/*
-
-a:hover:after  {
-    content: "";
-    border-bottom: 5px solid #ec6713;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -10px;
+#features svg path {
+    fill: #555; 
 }
 
-*/
+a:before {   /* this doesnt work on multi-line links */
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: -.5rem;
+    left: 0;
+    border-bottom: solid 3px rgb(4, 196, 214); 
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+a:link {
+    position: relative;
+    font-weight: bold; 
+    color: #999;
+    text-decoration: none;
+}
+
+/* visited */
+a:visited {
+    color: #999;
+}
+
+/* mouse over */
+a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(4, 196, 214);
+}
+
+    
+/* selected */
+a:active {
+    color: rgb(4, 196, 214);
+}
+
 
 
 
@@ -185,46 +268,26 @@ footer {
 }
 
 .feature {
-    margin-bottom: 2rem;
-    flex: 1 25%;
-    background-color: grey;
+    padding: 2rem;
+    flex: 1 8rem;
     text-align: center;
-    
-}
-
-textarea {
-    display: block;
-    margin-top: 2rem;
-    width: 100%;
-    outline: none;
-    resize: none;
-    overflow: auto;
+    align-self: flex-end;
 }
 
 .container-form {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+    width: 92.5%;
 }
 
-.container-form > div {
-    /* gives the gap in between the input fields, 
-    would be good to set the gap to 2rem @ all times */  
-    width: 47%;  
+.container-form input {
+    margin-bottom: 2rem;
 }
 
-form {
-    text-align: center;
-}
 
-input {
-    width: 100%;
+.container-form  textarea {
+    margin-bottom: 2rem;
     outline: none;
-    
+    resize: none;
+    overflow: auto;
 }
 
 footer {
