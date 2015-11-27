@@ -10,6 +10,13 @@ SU WATS1010, Fall 2015 - Sunny Yuen
 01 defaults
 02 typography
 03 layout / modules
+    a. general
+    b. header
+    c. navbar
+    d. overview
+    e. features
+    f. form (contact)
+    g. footer
 04 media queries
 
 
@@ -87,8 +94,6 @@ textarea {
 
 
 
-
- 
 /*  02 typography
 *********************************************************************/
 
@@ -117,9 +122,17 @@ h4,
     margin: 0;   
 }
 
+.logo-slogan {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;  /* for centering */
+    font-size: 75%;
+}
+
 .logo-API {
-    font: 5.653rem 'Titillium Web', sans-serif;
-    line-height: .8; 
+    font-size: 5.653rem;
+    line-height: .7; 
     font-weight: 600;
     text-shadow: 5px 8px #70d0da;
 }
@@ -216,12 +229,25 @@ a:active {
 }
 
 
+button {
+  /* border:  1px solid rgb(4, 196, 214); */
+  text-decoration: none;
+  text-align: center;
+  background: rgba(204, 204, 204, .7);
+  border: none;    
+  width: 100%;    
+}
+
+button:hover {
+  background: rgba(4, 196, 214, .5);
+  color: #fff;
+  text-decoration: none; 
+}
 
 
-/********************************************************************* 
-03 layout / modules
+
+/* 03 layout / modules
 *********************************************************************/
-
 
 
 body {
@@ -229,25 +255,20 @@ body {
     background-image: url(img/45degreee_fabric.png);
 }
 
-nav ul {
-    display: inline-block;
-}
-
-.page-container {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 4rem 2rem 1rem 2rem;
-}
-
 #overview,
 #testimonials,
 .container,
+.page-container,
 footer {
     max-width: 780px;
     /* centers content */
     margin: 0 auto;
     /* settting padding left/right when viewpoint is narrower than the content */
     padding: 4rem 2rem;
+}
+
+.page-container {
+    padding: 4rem 2rem 1rem 2rem;  /* changes to the spacing needed to top/bottom */ 
 }
 
 .credits,
@@ -257,15 +278,74 @@ footer {
     background-color: rgba(255, 255, 255, .6);
 }
 
-svg.feature-1 {
-        width: 52.5%;
-        height: auto;
+p.credits {     
+    margin-top: 0;
 }
 
-svg.feature-2 {
-        width: 76%;
-        height: auto;
+/* page header */
+
+#page-header {
+    border-bottom: 1px solid #ccc;
 }
+
+
+/* nav bar */
+
+nav ul {
+    display: inline-block;
+}
+
+nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 2rem;
+}
+
+.nav-anachors li {
+    margin-right: 2rem;
+}
+
+.nav-anachors {
+    flex: 3 auto;
+}
+
+.nav-functions li {
+    margin-left: 2rem;
+}
+.nav-functions {
+    flex: 1 auto;
+    text-align: right;
+}
+
+
+/* overview */
+
+.overview-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.overview-text {
+    flex: 1 40%;
+    align-self: flex-end;
+    margin-right: 2rem;
+}
+
+.overview-video {
+    flex: 1 60%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* features */
 
 .container-features {
     display: -webkit-box;
@@ -283,6 +363,19 @@ svg.feature-2 {
     align-self: flex-end;
 }
 
+svg.feature-1 {
+        width: 52.5%;
+        height: auto;
+}
+
+svg.feature-2 {
+        width: 76%;
+        height: auto;
+}
+
+
+/* form */
+
 .container-form {
     width: 92.5%;
 }
@@ -298,6 +391,9 @@ svg.feature-2 {
     resize: none;
     overflow: auto;
 }
+
+
+/* footer */
 
 footer {
     display: -webkit-box;
@@ -345,89 +441,42 @@ ul.footer-co-info li {
     padding: 1rem 2rem;
 }
 
-p.credits {
-    margin-top: 0;
-}
-
-nav {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    margin-top: 2rem;
-}
-
-.nav-anachors li {
-    margin-right: 2rem;
-}
-
-.nav-anachors {
-    flex: 3 auto;
-}
-
-.nav-functions li {
-    margin-left: 2rem;
-}
-.nav-functions {
-    flex: 1 auto;
-    text-align: right;
-}
-
-.overview-container {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-}
-
-.overview-text {
-    flex: 1 40%;
-    align-self: flex-end;
-    margin-right: 2rem;
-}
-
-.overview-video {
-    flex: 1 60%;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#page-header {
-    border-bottom: 1px solid #ccc;
-}
-
-button {
-  /* border:  1px solid rgb(4, 196, 214); */
-  text-decoration: none;
-  text-align: center;
-  background: rgba(204, 204, 204, .7);
-  border: none;    
-  width: 100%;    
-}
-
-button:hover {
-  background: rgba(4, 196, 214, .5);
-  color: #fff;
-  text-decoration: none; 
-}
-
 
 
 /* media queries 
 ************************************************************************/
 
-@media (max-width: 801px) {  /* when 3 columns of design/designer turn into 2 */
+@media (max-width: 802px) {  /* overview */
     
+    .overview-container {
+    flex-flow: column-reverse wrap;
+    }
+
+    .overview-text {
+    flex: 1 100%;
+    margin: 0;
+    padding-top: 2rem;
+    text-align: center;    
+    }
+
+    .overview-video {
+    flex: 1 100%;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    
+    .overview-text button {
+        width: 60%;
+    }
 
 }
 
-
 @media (max-width: 781px) {  /* features */
     
-    header {
+    header,
+    #features p:last-child,
+    #testimonials {
         text-align: center;
     }
     
@@ -464,7 +513,7 @@ button:hover {
 @media (max-width: 638px) {  /* features */
     
      html {
-        font-size: 90%;
+        font-size: 90%; /* shrinks all fonts down to scale */
     }   
 }
 
@@ -528,4 +577,21 @@ button:hover {
         height: auto;
     }
     
+}
+
+@media (max-width: 447px) {  /* features */
+ 
+    .logo-slogan {
+        font-size: 60%;
+    }
+    
+    .logo-superstore {
+        position: relative;
+        top: -1.5rem;
+    }
+    
+    .logo-API {
+        position: relative;
+        top: -.2rem;
+    }
 }
