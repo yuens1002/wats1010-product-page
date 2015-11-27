@@ -14,8 +14,7 @@ SU WATS1010, Fall 2015 - Sunny Yuen
 
 
 
-/********************************************************************* 
-01 deaults
+/*  01 deaults
 *********************************************************************/
 
 @import url(https://fonts.googleapis.com/css?family=Monda|Titillium+Web:200,600|Quicksand);
@@ -89,8 +88,8 @@ textarea {
 
 
 
-/********************************************************************* 
-02 typography
+ 
+/*  02 typography
 *********************************************************************/
 
 body, 
@@ -258,18 +257,28 @@ footer {
     background-color: rgba(255, 255, 255, .6);
 }
 
+svg.feature-1 {
+        width: 52.5%;
+        height: auto;
+}
+
+svg.feature-2 {
+        width: 76%;
+        height: auto;
+}
+
 .container-features {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
 }
 
 .feature {
     padding: 2rem;
-    flex: 1 8rem;
+    flex: 1 25%;
     text-align: center;
     align-self: flex-end;
 }
@@ -390,24 +399,6 @@ nav {
     border-bottom: 1px solid #ccc;
 }
 
-
-.btn {
-  -webkit-border-radius: 5;
-  -moz-border-radius: 5;
-  border-radius: 5px;
-  color: #333;
-  padding: 1rem 1.5rem 1rem 1rem;
-  border: solid #ccc 1px;
-  text-decoration: none;
-  text-align: center
-}
-
-.btn:hover {
-  background: #ccc;
-  color: #fff;
-  text-decoration: none;
-}
-
 button {
   /* border:  1px solid rgb(4, 196, 214); */
   text-decoration: none;
@@ -421,4 +412,120 @@ button:hover {
   background: rgba(4, 196, 214, .5);
   color: #fff;
   text-decoration: none; 
+}
+
+
+
+/* media queries 
+************************************************************************/
+
+@media (max-width: 801px) {  /* when 3 columns of design/designer turn into 2 */
+    
+
+}
+
+
+@media (max-width: 781px) {  /* features */
+    
+    header {
+        text-align: center;
+    }
+    
+    .container-features {
+        flex-wrap: wrap;    
+    }
+    
+    .feature {
+        flex: 1 25%;
+    }
+    
+    svg.feature-1 {
+        width: 20%;
+        height: auto;
+    }
+
+    svg.feature-2 {
+        width: 28%;
+        height: auto;
+    }
+    
+    svg.feature-3 {
+        width: 30%;
+        height: auto;
+    }
+
+    svg.feature-4 {
+        width: 30%;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 638px) {  /* features */
+    
+     html {
+        font-size: 90%;
+    }   
+}
+
+@media (max-width: 601px) {  /* footer */
+    
+    footer {
+        flex-wrap: wrap-reverse; 
+    }
+
+    .footer-links {
+        flex: 1 100%;
+        padding: 2rem 0 0 0;
+        margin: 0;
+        border-top: 1px solid #ccc;
+        text-align: center;
+    }
+    
+    .footer-info {
+        flex: 1 100%;
+        border: none;
+        margin: 0;
+        padding: 0 0 2rem 0;
+    }
+    
+     ul.footer-co-info li {
+        border: 0;
+        margin: 0 0 2rem 0;
+        display: block;
+        text-align: center;
+    }
+    
+    .footer-links button {
+        width: 40%;
+    }
+    
+}
+
+@media (max-width: 576px) {  /* features */
+    
+     .feature {
+        flex: 1 50%;
+    }
+    
+    svg.feature-1 {
+        width: 15%;
+        height: auto;
+    }
+
+    svg.feature-2 {
+        width: 23%;
+        height: auto;
+    }
+    
+    svg.feature-3 {
+        width: 25%;
+        height: auto;
+    }
+
+    svg.feature-4 {
+        width: 25%;
+        height: auto;
+    }
+    
 }
