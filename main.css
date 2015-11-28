@@ -18,6 +18,11 @@ SU WATS1010, Fall 2015 - Sunny Yuen
     f. form (contact)
     g. footer
 04 media queries
+    802px
+    781px
+    638px
+    576px
+    447px
 
 
 
@@ -175,8 +180,7 @@ footer svg:hover path {
 }
 
 footer svg path {
-    fill: #999;
-    
+    fill: #999;    
 }
 
 #features svg path {
@@ -359,6 +363,10 @@ nav {
 }
 
 
+aside.footer-links {
+    display: none;
+}
+
 /* features */
 
 .container-features {
@@ -460,8 +468,9 @@ ul.footer-co-info li {
 /* media queries 
 ************************************************************************/
 
-@media (max-width: 802px) {  /* overview */
+@media (max-width: 802px) { 
     
+    /* overview styles */
     .overview-container {
     flex-flow: column-reverse wrap;
     }
@@ -486,7 +495,7 @@ ul.footer-co-info li {
 
 }
 
-@media (max-width: 781px) {  /* features */
+@media (max-width: 781px) {
     
     header,
     #features p:last-child,
@@ -514,7 +523,6 @@ ul.footer-co-info li {
     .nav-anachors li {
         margin: 0;
     }
-    
     
     .container-features {
         flex-wrap: wrap;    
@@ -546,10 +554,10 @@ ul.footer-co-info li {
 
 }
 
-@media (max-width: 638px) {  /* features */
+@media (max-width: 638px) { 
     
      html {
-        font-size: 90%; /* shrinks all fonts down to scale */
+        font-size: 90%; /* shrinks all fonts down wihle preserving scale factor */
     }   
 }
 
@@ -587,13 +595,12 @@ ul.footer-co-info li {
     
 }
 
-@media (max-width: 576px) {  /* features */
+@media (max-width: 576px) {
     
+    /* feature setion */
      .feature {
         flex: 1 50%;
     }
-    
-  
     
     svg.feature-1 {
         width: 15%;
@@ -617,45 +624,67 @@ ul.footer-co-info li {
     
 }
 
-@media (max-width: 447px) {  /* features */
+@media (max-width: 447px) { 
     
-    .nav-anachors {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        justify-content: space-between;
+    /* vh specifies the 100% of viewpoint (vp) height and flex 
+    sets the container to stretch 100% of vp which 
+    align-items sets everything vertically center */
+    #page-header {
+        display: flex;  
+        height: 100vh;
+        align-items: center;
     }
     
-    .nav-anachors li {
-        margin: 0;
+    /* hides functions links */
+    .nav-small-functions {
+        display: none;
     }
- 
+    
+    /* hides nav bar links */
+    nav {
+        display: none;
+    }
+    
+    /* shows the nav area like the footer */
+    aside.footer-links {
+        display: block;
+        margin-bottom: 4rem;
+    }
+    
+    /* sets the svgs the same style as the ones in the footer */
+    .footer-links svg:hover path {
+    fill: rgb(4, 196, 214);
+    }
+    
+    /* sets the svgs the same style as the ones in the footer */
+    .footer-links svg path {
+    fill: #999;    
+    }
+    
+    /* looks better with 200px height */
     iframe {
         height: 200px; 
     }
     
+    /* spacing issues with the logo */
     .logo-slogan {
         font-size: 60%;
     }
     
+    /* spacing issues with the logo */
     .logo-superstore {
         position: relative;
         top: -1.5rem;
     }
     
+    /* spacing issues with the logo */
     .logo-API {
         position: relative;
         top: -.2rem;
     }
     
+    /* spacing issues with the logo */
     #page-header header {
         margin-bottom: 0;
-    }
-    
-    nav {
-        margin-top: 0;
-        font-size: 90%;
     }
 }
